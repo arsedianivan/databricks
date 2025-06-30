@@ -1,4 +1,4 @@
-# Beginner's Guide to Building an IoT Streaming Pipeline with Delta Live Tables in Databricks
+# Guide to Building an IoT Streaming Pipeline with Delta Live Tables in Databricks
 
 ## What You'll Build
 In this guide, you'll create a real-time data pipeline that:
