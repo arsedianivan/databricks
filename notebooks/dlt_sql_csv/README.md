@@ -1,4 +1,4 @@
-# Beginner's Guide to Building a Streaming Pipeline with Delta Live Tables in Databricks (Python)
+# Guide to Building a Streaming Pipeline with Delta Live Tables in Databricks (Python)
 
 ## What You'll Build
 In this guide, you'll create a real-time data pipeline that:
