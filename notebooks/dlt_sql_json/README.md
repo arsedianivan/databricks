@@ -1,4 +1,4 @@
-# Beginner's Guide to Building an IoT Streaming Pipeline with Delta Live Tables in Databricks
+# Step-by-Step Guide to Building an IoT Streaming Pipeline with Delta Live Tables in Databricks
 
 ## What You'll Build
 
@@ -34,8 +34,8 @@ Think of it as getting real-time updates from thousands of Fitbits!
 
 ### Data Location
 
-Path: > /databricks-datasets/iot-stream/data-device/
-Format: JSON files (JavaScript Object Notation - a common data format)
+- Path: > /databricks-datasets/iot-stream/data-device/
+- Format: JSON files (JavaScript Object Notation - a common data format)
 Step 2: Create Your DLT Pipeline
 Navigate to Workflows
 Click "Workflows" in the left sidebar
