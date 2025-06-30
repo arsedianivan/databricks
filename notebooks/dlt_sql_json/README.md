@@ -30,30 +30,37 @@ The sample IoT data simulates fitness trackers sending data about:
 
 Think of it as getting real-time updates from thousands of Fitbits!
 
-### Data Location
+**Data Location**
+- Path: `/databricks-datasets/iot-stream/data-device/`
+- Format: JSON files (JavaScript Object Notation - a common data format)
 
-Path: > /databricks-datasets/iot-stream/data-device/
-Format: JSON files (JavaScript Object Notation - a common data format)
-Step 2: Create Your DLT Pipeline
-Navigate to Workflows
-Click "Workflows" in the left sidebar
-Click "Delta Live Tables" tab
-Click "Create Pipeline"
-Configure Your Pipeline
-Pipeline name: iot_fitness_streaming_pipeline
-Product edition: Choose "Core" (most affordable for learning)
-Pipeline mode: Select "Triggered" (easier to control while learning)
-Target schema: Type fitness_analytics (where your tables will live)
-Click "Save"
-Step 3: Create Your Pipeline Notebook
-Create a New Notebook
-Click "Create" → "Notebook"
-Name it: IoT_Fitness_DLT_Pipeline
-Select "SQL" as the language
-Important Reminder: This notebook should ONLY contain CREATE TABLE statements!
-Add the Following Code (copy each section into separate cells):
-Cell 1: Bronze Table (Raw Data)
-sql
+## Step 2: Create Your DLT Pipeline
+
+1. **Navigate to Workflows**
+   - Click "Workflows" in the left sidebar
+   - Click "Delta Live Tables" tab
+   - Click "Create Pipeline"
+
+2. **Configure Your Pipeline**
+   - **Pipeline name**: `iot_fitness_streaming_pipeline`
+   - **Product edition**: Choose "Core" (most affordable for learning)
+   - **Pipeline mode**: Select "Triggered" (easier to control while learning)
+   - **Target schema**: Type `fitness_analytics` (where your tables will live)
+   - Click "Save"
+
+## Step 3: Create Your Pipeline Notebook
+
+1. **Create a New Notebook**
+   - Click "Create" → "Notebook"
+   - Name it: `IoT_Fitness_DLT_Pipeline`
+   - Select "SQL" as the language
+
+2. **Important Reminder**: This notebook should ONLY contain CREATE TABLE statements!
+
+3. **Add the Following Code** (copy each section into separate cells):
+
+### Cell 1: Bronze Table (Raw Data)
+```sql
 -- This reads the raw IoT device data as it arrives
 CREATE OR REFRESH STREAMING LIVE TABLE fitness_devices_bronze
 COMMENT "Raw IoT fitness device data from JSON files"
